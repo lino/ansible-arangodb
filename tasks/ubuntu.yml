@@ -1,0 +1,12 @@
+---
+- name: Add arangodb apt Repository
+  apt_repository: repo='deb http://www.arangodb.org/repositories/arangodb2/xUbuntu_12.10/ /' state=present
+
+- name: Add arangodb vagapt key
+  apt_key: url=http://www.arangodb.org/repositories/arangodb2/xUbuntu_12.10/Release.key state=present
+
+- name: apt-get update
+  apt: update_cache=yes
+
+- name: Install arangodb
+  apt: pkg=arangodb={{ arangodb_version }}

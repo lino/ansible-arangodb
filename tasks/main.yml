@@ -1,0 +1,4 @@
+---
+# tasks file for arangodb
+- include: ubuntu.yml
+  when: ansible_distribution == "Ubuntu"
