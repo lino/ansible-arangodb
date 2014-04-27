@@ -2,7 +2,7 @@
 galaxy_info:
   author: Lino
   description: ArangoDB Server
-  company:
+  # company:
   license: MIT
   min_ansible_version: 1.2
   #
